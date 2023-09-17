@@ -1,5 +1,11 @@
 <template>
   <h1>This is an Bootstrap page</h1>
+  <button class="btn btn-primary btn-lg" type="button">
+    <font-awesome-icon :icon="['fas', 'phone']" />
+  </button>
+  <button class="btn btn-primary btn-lg" type="button">
+    <font-awesome-icon :icon="['fas', 'user']" />
+  </button>
   <BootstrapComponent />
 </template>
     

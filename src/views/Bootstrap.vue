@@ -3,21 +3,19 @@
   <button class="btn btn-primary btn-lg" type="button">
     <font-awesome-icon :icon="['fas', 'phone']" />
   </button>
-  <button class="btn btn-primary btn-lg" type="button">
-    <font-awesome-icon :icon="['fas', 'user']" />
-  </button>
   <BootstrapComponent />
 </template>
     
     
 <script lang="ts">
-import { Options, Vue } from "vue-class-component";
+import BootstrapComponentVue from "@/components/BootstrapComponent.vue";
+import { defineComponent } from "vue";
 import BootstrapComponent from "@/components/BootstrapComponent.vue";
 
-@Options({
+export default defineComponent({
   components: {
     BootstrapComponent,
   },
-})
-export default class Bootstrap extends Vue {}
+  setup() {},
+});
 </script>

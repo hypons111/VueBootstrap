@@ -2,39 +2,27 @@
   <table class="table">
     <thead>
       <tr>
-        <th v-for="item in studentData.header" :key="item" scope="col">
+        <th v-for="item in props.tableData.header" :key="item" scope="col">
           {{ item }}
         </th>
       </tr>
     </thead>
     <tbody>
-      <tr v-for="item in studentData.body" :key="item.id">
+      <tr v-for="item in props.tableData.body" :key="item.id">
         <td>{{ item.id }}</td>
         <td>{{ item.name }}</td>
         <td>{{ item.age }}</td>
+        <td v-if="item.subject">{{ item.subject }}</td>
       </tr>
     </tbody>
   </table>
 </template>
 
-<script lang="ts">
+<script setup>
 import { defineComponent, ref } from "vue";
 
-export default defineComponent({
-  setup() {
-    const studentData = ref({
-      header: ["#", "Name", "Age"],
-      body: [
-        { id: 1, name: "Mark", age: 10 },
-        { id: 2, name: "Jacob", age: 10 },
-        { id: 3, name: "Larry", age: 10 },
-      ],
-    });
-
-    return {
-      studentData,
-    };
-  },
+const props = defineProps({
+  tableData: Object, // 唔指定型別都可以，咁就乜都可以接。
 });
 </script>
 

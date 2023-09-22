@@ -1,8 +1,9 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/bootstrap">Bootstrap</router-link>
+    <router-link to="/"><font-awesome-icon :icon="['fas', 'user']" /></router-link> |
+    <router-link to="/props">Props</router-link> |
+    <router-link to="/emit">Emit</router-link> |
+    <router-link to="/about">Bootstrap</router-link>
   </nav>
   <router-view />
 </template>

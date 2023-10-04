@@ -19,7 +19,7 @@
 </template>
 
 <script setup>
-import { defineComponent, ref } from "vue";
+import {} from "vue";
 
 const props = defineProps({
   tableData: Object, // 唔指定型別都可以，咁就乜都可以接。

@@ -1,31 +1,25 @@
 <template>
   <div class="container">
     <h1>Props</h1>
-    <button
-      class="btn btn-primary btn-lg"
-      type="button"
-      @click="switchTableData('teacher')"
-    >
+
+    <button class="btn btn-primary btn-lg"  type="button" @click="switchTableData('teacher')">
       Teacher
     </button>
-    <button
-      class="btn btn-primary btn-lg"
-      type="button"
-      @click="switchTableData('student')"
-    >
+
+    <button class="btn btn-primary btn-lg" type="button" @click="switchTableData('student')">
       Student
     </button>
 
     <!-- :tableData 同子組件props接收名稱要一樣 -->
     <!-- "tableData" 係父組件傳俾子組件參數 -->
-    <BootstrapComponent :tableData="tableData" />
+    <PropComponent :tableData="tableData"/>
   </div>
 </template>
     
     
 <script setup>
 import { defineComponent, ref } from "vue";
-import BootstrapComponent from "@/components/BootstrapComponent.vue";
+import PropComponent from "@/components/PropComponent.vue";
 
 const studentData = ref({
   tableName: "student",

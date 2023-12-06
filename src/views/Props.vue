@@ -18,7 +18,7 @@
     
     
 <script setup>
-import { defineComponent, ref } from "vue";
+import { ref } from "vue";
 import PropComponent from "@/components/PropComponent.vue";
 
 const studentData = ref({
